@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tool>
+  <set>
+    <zgw>
+      <test>
+        <exportPath>C:\Users\Administrator\Desktop\trunk\zgwtrunk\Horizon.Web</exportPath>
+        <targetPath>E:\ZgwPackages\zgw</targetPath>
+        <binPath>E:\ZgwProjects\trunk\Horizon.Web\bin</binPath>
+      </test>
+      <formal>
+        <exportPath>C:\Users\Administrator\Desktop\trunk\trunkV1.0\Horizon.Web</exportPath>
+        <targetPath>E:\ZgwPackages\zgw</targetPath>
+        <binPath>E:\ZgwProjects\trunkold\Horizon.Web\bin</binPath>
+      </formal>
+      <other>
+        
+      </other>
+    </zgw>
+    <zms>
+      <test>
+        <exportPath></exportPath>
+        <targetPath></targetPath>
+        <binPath></binPath>
+      </test>
+      <formal>
+        <exportPath></exportPath>
+        <targetPath></targetPath>
+        <binPath></binPath>
+      </formal>
+      <other>
+
+      </other>
+    </zms>
+  </set>
+</tool>
