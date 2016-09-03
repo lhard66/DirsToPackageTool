@@ -60,6 +60,10 @@ namespace DirsToPackageTool
                         int locY = Int32.Parse(eleItem.Element("point").Attribute("y").Value);
                         SetEntity.Point = new Point(locX, locY);
                         break;
+                    case "export":
+                        SetEntity.ExportPath = eleItem.Element("value").Value;
+                        break;
+
                 }
             }
             return true;

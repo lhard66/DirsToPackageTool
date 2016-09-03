@@ -21,7 +21,9 @@ namespace DirsToPackageTool
             [Description("测试环境打包")]
             test,
             [Description("正式环境打包")]
-            formal
+            formal,
+            [Description("导出文件")]
+            export
         }
     }
 }

@@ -19,6 +19,7 @@ namespace DirsToPackageTool
         private static int _formalNum;
 
         public static System.Drawing.Point Point { get; set; }
+        public static string ExportPath { get; set; }
 
         //初始化值 
         private static ToolEnum.WebName _webName=ToolEnum.WebName.zgw;//是打zgw包还是zms包

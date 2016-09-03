@@ -56,6 +56,7 @@
             this.btnFormalPackage = new System.Windows.Forms.Button();
             this.btnTestPackage = new System.Windows.Forms.Button();
             this.notifyIconMain = new System.Windows.Forms.NotifyIcon(this.components);
+            this.tsmExport = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -90,7 +91,7 @@
             this.tsmTop.Checked = true;
             this.tsmTop.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tsmTop.Name = "tsmTop";
-            this.tsmTop.Size = new System.Drawing.Size(124, 22);
+            this.tsmTop.Size = new System.Drawing.Size(152, 22);
             this.tsmTop.Text = "置顶";
             this.tsmTop.Click += new System.EventHandler(this.tsmTop_Click);
             // 
@@ -100,7 +101,7 @@
             this.zGWToolStripMenuItem,
             this.zMSToolStripMenuItem});
             this.打包项目ToolStripMenuItem.Name = "打包项目ToolStripMenuItem";
-            this.打包项目ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.打包项目ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.打包项目ToolStripMenuItem.Text = "打包项目";
             // 
             // zGWToolStripMenuItem
@@ -124,14 +125,14 @@
             this.tsmLogFrm.Checked = true;
             this.tsmLogFrm.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tsmLogFrm.Name = "tsmLogFrm";
-            this.tsmLogFrm.Size = new System.Drawing.Size(124, 22);
+            this.tsmLogFrm.Size = new System.Drawing.Size(152, 22);
             this.tsmLogFrm.Text = "日志弹窗";
             this.tsmLogFrm.Click += new System.EventHandler(this.tsmLogFrm_Click);
             // 
             // tsmOption
             // 
             this.tsmOption.Name = "tsmOption";
-            this.tsmOption.Size = new System.Drawing.Size(124, 22);
+            this.tsmOption.Size = new System.Drawing.Size(152, 22);
             this.tsmOption.Text = "选项";
             this.tsmOption.Click += new System.EventHandler(this.tsmOption_Click);
             // 
@@ -139,7 +140,8 @@
             // 
             this.编辑ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmZGWTest,
-            this.tsmZGWFormal});
+            this.tsmZGWFormal,
+            this.tsmExport});
             this.编辑ToolStripMenuItem.Name = "编辑ToolStripMenuItem";
             this.编辑ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.编辑ToolStripMenuItem.Text = "编辑";
@@ -331,6 +333,13 @@
             this.notifyIconMain.Visible = true;
             this.notifyIconMain.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIconMain_MouseClick);
             // 
+            // tsmExport
+            // 
+            this.tsmExport.Name = "tsmExport";
+            this.tsmExport.Size = new System.Drawing.Size(152, 22);
+            this.tsmExport.Text = "导出文件";
+            this.tsmExport.Click += new System.EventHandler(this.tsmExport_Click);
+            // 
             // Main
             // 
             this.AcceptButton = this.btnTestPackage;
@@ -389,5 +398,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmLogFrm;
         private System.Windows.Forms.RichTextBox txtClipper;
         private System.Windows.Forms.ToolStripMenuItem tsmClipperClear;
+        private System.Windows.Forms.ToolStripMenuItem tsmExport;
     }
 }

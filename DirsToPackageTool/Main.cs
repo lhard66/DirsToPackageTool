@@ -87,6 +87,11 @@ namespace DirsToPackageTool
                 strSourceDir = SetEntity.FormalBinPath.Substring(0, SetEntity.FormalBinPath.IndexOf("Horizon"));
                 strTargetDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + @"\trunk\trunkV1.0\";
             }
+            else if (webtype == ToolEnum.WebType.export)
+            {
+                strSourceDir = SetEntity.TestBinPath.Substring(0, SetEntity.TestBinPath.IndexOf("Horizon"));
+                strTargetDir = SetEntity.ExportPath + @"\";
+            }
             else
             {
                 return false;
@@ -103,7 +108,7 @@ namespace DirsToPackageTool
                 }
                 //得到文件扩展名，判断是否是类文件
                 string strExt = Path.GetExtension(item);
-                if (strExt == ".cs"||strExt=="")
+                if (strExt == ".cs" || strExt == "")
                 {
                     continue;
                 }
@@ -586,6 +591,11 @@ namespace DirsToPackageTool
         private void tsmClipperClear_Click(object sender, EventArgs e)
         {
             txtClipper.Text = "";
+        }
+
+        private void tsmExport_Click(object sender, EventArgs e)
+        {
+            CopyPackageFilesToDesk(ToolEnum.WebType.export);
         }
 
 

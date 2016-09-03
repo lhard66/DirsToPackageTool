@@ -1,35 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <tool>
   <set>
-    <zgw>
-      <test>
-        <exportPath>C:\Users\Administrator\Desktop\trunk\zgwtrunk\Horizon.Web</exportPath>
-        <targetPath>E:\ZgwPackages\zgw</targetPath>
-        <binPath>E:\ZgwProjects\trunk\Horizon.Web\bin</binPath>
-      </test>
-      <formal>
-        <exportPath>C:\Users\Administrator\Desktop\trunk\trunkV1.0\Horizon.Web</exportPath>
-        <targetPath>E:\ZgwPackages\zgw</targetPath>
-        <binPath>E:\ZgwProjects\trunkold\Horizon.Web\bin</binPath>
-      </formal>
-      <other>
-        
-      </other>
-    </zgw>
-    <zms>
-      <test>
-        <exportPath></exportPath>
-        <targetPath></targetPath>
-        <binPath></binPath>
-      </test>
-      <formal>
-        <exportPath></exportPath>
-        <targetPath></targetPath>
-        <binPath></binPath>
-      </formal>
-      <other>
-
-      </other>
-    </zms>
+    <path type="zgwtest">
+      <export>X:\Users\HeroLiu\Desktop\trunk\zgwtrunk\Horizon.Web</export>
+      <target>E:\ZgwPackages\zgw</target>
+      <bin>E:\ZgwProjects\trunk\Horizon.Web\bin</bin>
+    </path>
+    <path type="zgwformal">
+      <export>X:\Users\HeroLiu\Desktop\trunk\trunkV1.0\Horizon.Web</export>
+      <target>E:\ZgwPackages\zgw</target>
+      <bin>E:\ZgwProjects\trunkold\Horizon.Web\bin</bin>
+    </path>
+    <path type="zgwothers"></path>
+    <path type="zmstest"></path>
+    <path type="application">
+      <point x="1531" y="564" />
+    </path>
+    <path type="export">
+      <value>E:\音乐\exports</value>
+    </path>
   </set>
 </tool>
