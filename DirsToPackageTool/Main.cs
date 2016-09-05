@@ -76,24 +76,36 @@ namespace DirsToPackageTool
             //项目所在地址
             string strSourceDir = null;
             string strTargetDir = null;
+            //是否导出所有文件
+            bool isExportAll = false;
             if (webtype == ToolEnum.WebType.test)
             {
                 strSourceDir = SetEntity.TestBinPath.Substring(0, SetEntity.TestBinPath.IndexOf("Horizon"));
                 //获得桌面所在路径
                 strTargetDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + @"\trunk\zgwtrunk\";
+                isExportAll = false;
             }
             else if (webtype == ToolEnum.WebType.formal)
             {
                 strSourceDir = SetEntity.FormalBinPath.Substring(0, SetEntity.FormalBinPath.IndexOf("Horizon"));
                 strTargetDir = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop) + @"\trunk\trunkV1.0\";
+                isExportAll = false;
             }
             else if (webtype == ToolEnum.WebType.export)
             {
                 strSourceDir = SetEntity.TestBinPath.Substring(0, SetEntity.TestBinPath.IndexOf("Horizon"));
                 strTargetDir = SetEntity.ExportPath + @"\";
+                isExportAll = true;
+                //删除exports文件夹
+                if (Directory.Exists(strTargetDir))
+                {
+                    Directory.Delete(strTargetDir, true);
+                    txtMsg.AppendText("删除exports文件夹已完成。\r\n");
+                }                
             }
             else
             {
+                txtMsg.AppendText("导出失败。\r\n");
                 return false;
             }
 
@@ -106,12 +118,16 @@ namespace DirsToPackageTool
                 {
                     continue;
                 }
-                //得到文件扩展名，判断是否是类文件
-                string strExt = Path.GetExtension(item);
-                if (strExt == ".cs" || strExt == "")
+                if (!isExportAll)
                 {
-                    continue;
+                    //得到文件扩展名，判断是否是类文件
+                    string strExt = Path.GetExtension(item);
+                    if (strExt == ".cs" || strExt == "")
+                    {
+                        continue;
+                    }
                 }
+                
                 int clipperIndex = item.IndexOf("Horizon");
                 if (clipperIndex < 0)
                 {
